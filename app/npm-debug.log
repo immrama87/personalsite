@@ -1,0 +1,220 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'n' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.17
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'n', null ]
+6 verbose cache add name=undefined spec="n" args=["n",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'n',
+7 verbose parsed url   path: 'n',
+7 verbose parsed url   href: 'n' }
+8 silly lockFile d1854cae-n n
+9 verbose lock n C:\Users\jminer\AppData\Roaming\npm-cache\d1854cae-n.lock
+10 silly lockFile d1854cae-n n
+11 silly lockFile d1854cae-n n
+12 verbose addNamed [ 'n', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 6b58d7dc-n n@
+15 verbose lock n@ C:\Users\jminer\AppData\Roaming\npm-cache\6b58d7dc-n.lock
+16 silly addNameRange { name: 'n', range: '*', hasData: false }
+17 verbose url raw n
+18 verbose url resolving [ 'https://registry.npmjs.org/', './n' ]
+19 verbose url resolved https://registry.npmjs.org/n
+20 info trying registry request attempt 1 at 22:06:23
+21 http GET https://registry.npmjs.org/n
+22 http 200 https://registry.npmjs.org/n
+23 silly registry.get cb [ 200,
+23 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly registry.get     etag: '"8DZTKZ2AF65AYVVIT2RVTI9Q6"',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=300',
+23 silly registry.get     'content-length': '56046',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     date: 'Wed, 11 May 2016 02:06:23 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1462932383.139780,VS0,VE54',
+23 silly registry.get     vary: 'Accept-Encoding' } ]
+24 silly addNameRange number 2 { name: 'n', range: '*', hasData: true }
+25 silly addNameRange versions [ 'n',
+25 silly addNameRange   [ '0.0.1',
+25 silly addNameRange     '0.0.2',
+25 silly addNameRange     '0.0.3',
+25 silly addNameRange     '0.0.4',
+25 silly addNameRange     '0.1.0',
+25 silly addNameRange     '0.1.1',
+25 silly addNameRange     '0.1.2',
+25 silly addNameRange     '0.2.0',
+25 silly addNameRange     '0.2.1',
+25 silly addNameRange     '0.2.2',
+25 silly addNameRange     '0.3.0',
+25 silly addNameRange     '0.4.0',
+25 silly addNameRange     '0.4.1',
+25 silly addNameRange     '0.4.2',
+25 silly addNameRange     '0.5.0',
+25 silly addNameRange     '0.5.1',
+25 silly addNameRange     '0.5.2',
+25 silly addNameRange     '0.5.3',
+25 silly addNameRange     '0.5.4',
+25 silly addNameRange     '0.6.0',
+25 silly addNameRange     '0.6.1',
+25 silly addNameRange     '0.7.0',
+25 silly addNameRange     '0.7.1',
+25 silly addNameRange     '0.7.2',
+25 silly addNameRange     '0.7.3',
+25 silly addNameRange     '0.8.0',
+25 silly addNameRange     '0.8.1',
+25 silly addNameRange     '0.8.2',
+25 silly addNameRange     '0.9.0',
+25 silly addNameRange     '0.9.1',
+25 silly addNameRange     '0.9.2',
+25 silly addNameRange     '0.9.3',
+25 silly addNameRange     '1.0.0',
+25 silly addNameRange     '1.1.0',
+25 silly addNameRange     '1.2.1',
+25 silly addNameRange     '1.2.2',
+25 silly addNameRange     '1.2.3',
+25 silly addNameRange     '1.2.4',
+25 silly addNameRange     '1.2.5',
+25 silly addNameRange     '1.2.6',
+25 silly addNameRange     '1.2.7',
+25 silly addNameRange     '1.2.8',
+25 silly addNameRange     '1.2.9',
+25 silly addNameRange     '1.2.11',
+25 silly addNameRange     '1.2.13',
+25 silly addNameRange     '1.2.14',
+25 silly addNameRange     '1.3.0',
+25 silly addNameRange     '1.4.0',
+25 silly addNameRange     '2.0.0',
+25 silly addNameRange     '1.4.1',
+25 silly addNameRange     '2.0.1',
+25 silly addNameRange     '1.4.2',
+25 silly addNameRange     '2.0.2',
+25 silly addNameRange     '2.1.0' ] ]
+26 verbose addNamed [ 'n', '2.1.0' ]
+27 verbose addNamed [ '2.1.0', '2.1.0' ]
+28 silly lockFile 0a8123fc-n-2-1-0 n@2.1.0
+29 verbose lock n@2.1.0 C:\Users\jminer\AppData\Roaming\npm-cache\0a8123fc-n-2-1-0.lock
+30 silly lockFile 0a17a2ed-registry-npmjs-org-n-n-2-1-0-tgz https://registry.npmjs.org/n/-/n-2.1.0.tgz
+31 verbose lock https://registry.npmjs.org/n/-/n-2.1.0.tgz C:\Users\jminer\AppData\Roaming\npm-cache\0a17a2ed-registry-npmjs-org-n-n-2-1-0-tgz.lock
+32 verbose addRemoteTarball [ 'https://registry.npmjs.org/n/-/n-2.1.0.tgz',
+32 verbose addRemoteTarball   '4fc736dc18291e464c79fda9ef8faf21e6e1a679' ]
+33 info retry fetch attempt 1 at 22:06:23
+34 verbose fetch to= C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\tmp.tgz
+35 http GET https://registry.npmjs.org/n/-/n-2.1.0.tgz
+36 http 200 https://registry.npmjs.org/n/-/n-2.1.0.tgz
+37 verbose tar unpack C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\tmp.tgz
+38 silly lockFile e6296dc1-83273-0-9668434427585453-package tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package
+39 verbose lock tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package C:\Users\jminer\AppData\Roaming\npm-cache\e6296dc1-83273-0-9668434427585453-package.lock
+40 silly lockFile 17a0d056-83273-0-9668434427585453-tmp-tgz tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\tmp.tgz
+41 verbose lock tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\tmp.tgz C:\Users\jminer\AppData\Roaming\npm-cache\17a0d056-83273-0-9668434427585453-tmp-tgz.lock
+42 silly gunzTarPerm modes [ '755', '644' ]
+43 silly gunzTarPerm extractEntry package.json
+44 silly gunzTarPerm extractEntry README.md
+45 silly gunzTarPerm extractEntry Makefile
+46 silly gunzTarPerm extractEntry bin/n
+47 silly lockFile e6296dc1-83273-0-9668434427585453-package tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package
+48 silly lockFile e6296dc1-83273-0-9668434427585453-package tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package
+49 silly lockFile 17a0d056-83273-0-9668434427585453-tmp-tgz tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\tmp.tgz
+50 silly lockFile 17a0d056-83273-0-9668434427585453-tmp-tgz tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\tmp.tgz
+51 verbose tar pack [ 'C:\\Users\\jminer\\AppData\\Roaming\\npm-cache\\n\\2.1.0\\package.tgz',
+51 verbose tar pack   'C:\\Users\\jminer\\AppData\\Local\\Temp\\npm-12976-B5VVghgR\\1462932383273-0.9668434427585453\\package' ]
+52 verbose tarball C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+53 verbose folder C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package
+54 silly lockFile e6296dc1-83273-0-9668434427585453-package tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package
+55 verbose lock tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package C:\Users\jminer\AppData\Roaming\npm-cache\e6296dc1-83273-0-9668434427585453-package.lock
+56 silly lockFile ab044c86-ng-npm-cache-n-2-1-0-package-tgz tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+57 verbose lock tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz C:\Users\jminer\AppData\Roaming\npm-cache\ab044c86-ng-npm-cache-n-2-1-0-package-tgz.lock
+58 silly lockFile e6296dc1-83273-0-9668434427585453-package tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package
+59 silly lockFile e6296dc1-83273-0-9668434427585453-package tar://C:\Users\jminer\AppData\Local\Temp\npm-12976-B5VVghgR\1462932383273-0.9668434427585453\package
+60 silly lockFile ab044c86-ng-npm-cache-n-2-1-0-package-tgz tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+61 silly lockFile ab044c86-ng-npm-cache-n-2-1-0-package-tgz tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+62 silly lockFile 632c4d31-oaming-npm-cache-n-2-1-0-package C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package
+63 verbose lock C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package C:\Users\jminer\AppData\Roaming\npm-cache\632c4d31-oaming-npm-cache-n-2-1-0-package.lock
+64 silly lockFile 632c4d31-oaming-npm-cache-n-2-1-0-package C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package
+65 silly lockFile 632c4d31-oaming-npm-cache-n-2-1-0-package C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package
+66 verbose tar unpack C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+67 silly lockFile 7080d410-oaming-npm-cache-n-2-1-0-package tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package
+68 verbose lock tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package C:\Users\jminer\AppData\Roaming\npm-cache\7080d410-oaming-npm-cache-n-2-1-0-package.lock
+69 silly lockFile ab044c86-ng-npm-cache-n-2-1-0-package-tgz tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+70 verbose lock tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz C:\Users\jminer\AppData\Roaming\npm-cache\ab044c86-ng-npm-cache-n-2-1-0-package-tgz.lock
+71 silly gunzTarPerm modes [ '755', '644' ]
+72 silly gunzTarPerm extractEntry package.json
+73 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+74 silly gunzTarPerm extractEntry README.md
+75 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+76 silly gunzTarPerm extractEntry bin/n
+77 silly gunzTarPerm modified mode [ 'bin/n', 438, 420 ]
+78 silly gunzTarPerm extractEntry Makefile
+79 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+80 silly lockFile 7080d410-oaming-npm-cache-n-2-1-0-package tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package
+81 silly lockFile 7080d410-oaming-npm-cache-n-2-1-0-package tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package
+82 silly lockFile ab044c86-ng-npm-cache-n-2-1-0-package-tgz tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+83 silly lockFile ab044c86-ng-npm-cache-n-2-1-0-package-tgz tar://C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+84 verbose chmod C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz 644
+85 silly chown skipping for windows C:\Users\jminer\AppData\Roaming\npm-cache\n\2.1.0\package.tgz
+86 silly lockFile 0a17a2ed-registry-npmjs-org-n-n-2-1-0-tgz https://registry.npmjs.org/n/-/n-2.1.0.tgz
+87 silly lockFile 0a17a2ed-registry-npmjs-org-n-n-2-1-0-tgz https://registry.npmjs.org/n/-/n-2.1.0.tgz
+88 silly lockFile 0a8123fc-n-2-1-0 n@2.1.0
+89 silly lockFile 0a8123fc-n-2-1-0 n@2.1.0
+90 silly lockFile 6b58d7dc-n n@
+91 silly lockFile 6b58d7dc-n n@
+92 silly resolved [ { name: 'n',
+92 silly resolved     description: 'Interactively Manage All Your Node Versions',
+92 silly resolved     version: '2.1.0',
+92 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+92 silly resolved     homepage: 'https://github.com/tj/n',
+92 silly resolved     bugs: { url: 'https://github.com/tj/n/issues' },
+92 silly resolved     contributors: [ [Object], [Object], [Object] ],
+92 silly resolved     keywords:
+92 silly resolved      [ 'nvm',
+92 silly resolved        'node',
+92 silly resolved        'version',
+92 silly resolved        'manager',
+92 silly resolved        'switcher',
+92 silly resolved        'node',
+92 silly resolved        'binary',
+92 silly resolved        'env' ],
+92 silly resolved     bin: { n: './bin/n' },
+92 silly resolved     repository: { type: 'git', url: 'git://github.com/tj/n.git' },
+92 silly resolved     preferGlobal: true,
+92 silly resolved     os: [ '!win32' ],
+92 silly resolved     engines: { node: '*' },
+92 silly resolved     license: 'MIT',
+92 silly resolved     readme: '# n\n\n[![Join the chat at https://gitter.im/tj/n](https://img.shields.io/gitter/room/tj/n.svg?style=flat-square)](https://gitter.im/tj/n)\n[![npm](https://img.shields.io/npm/dt/n.svg?style=flat-square)](https://www.npmjs.com/package/n)\n[![npm](https://img.shields.io/npm/dm/n.svg?style=flat-square)](https://www.npmjs.com/package/n)\n[![npm](https://img.shields.io/npm/v/n.svg?style=flat-square)](https://www.npmjs.com/package/n)\n[![npm](https://img.shields.io/npm/l/n.svg?style=flat-square)](https://www.npmjs.com/package/n)\n\nSimple flavour of node/iojs binary management, no subshells, no profile setup, no convoluted api, just _simple_.\n\n*Note: Does not work on Windows at the moment. Pull Requests are appreciated.*\n*If you are searching for the latest version below 2.x.x, check out the branch "1.x.x"*\n\n ![](https://i.cloudup.com/59cA8VEDae.gif)\n\n## Installation\n\nWith node/iojs already installed:\n\n    $ npm install -g n\n\nor, by cloning this repo and running:\n\n    $ make install\n\nto install `n` to subdirectory `bin/n` of the directory specified in environment variable `PREFIX`, which defaults to `/usr/local` (note that you will likely need `sudo` to install there).  \nTo change the default to, say, `$HOME`, i.e., to install `n` to `$HOME/bin/n`, run `PREFIX=$HOME make install`.  \n\nOnce installed, `n` downloads node/iojs versions to subdirectory `n/versions` of the directory specified in environment variable `N_PREFIX`, which defaults to `/usr/local`; the _active_ node/iojs version is installed directly in `N_PREFIX`.  \nTo change the default to, say, `$HOME`, prefix later calls to `n` with `N_PREFIX=$HOME ` or add `export N_PREFIX=$HOME` to your shell initialization file.\n\nAlternatively, consider third-party installer [n-install](https://github.com/mklement0/n-install), which allows installation directly from GitHub; for instance,\n\n    curl -L http://git.io/n-install | bash\n\nsets both `PREFIX` and `N_PREFIX` to `$HOME/n`, installs `n` to `$HOME/n/bin`, modifies the initialization files of supported shells to export `N_PREFIX` and add `$HOME/n/bin` to the `PATH`, and installs the latest stable node version.  \nAs a result, both `n` itself and all node/iojs versions it manages are hosted inside a single, optionally configurable directory, which you can later remove with the included `n-uninstall` script; script `n-update` updates `n` itself to the latest version - see the [n-install repo](https://github.com/mklement0/n-install) for details.\n\n### Installing Binaries\n\nInstall a few nodes:\n\n    $ n 0.8.14\n    $ n 0.8.17\n    $ n 0.9.6\n\nType `n` to prompt selection of an installed node. Use the up /\ndown arrow to navigate, and press enter or the right arrow to\nselect, or ^C to cancel:\n\n    $ n\n\n      0.8.14\n    ο 0.8.17\n      0.9.6\n\nUse or install the latest official release:\n\n    $ n latest\n\nUse or install the stable official release:\n\n    $ n stable\n\nUse or install the latest LTS official release:\n\n    $ n lts\n\n### Removing Binaries\n\nRemove some versions:\n\n    $ n rm 0.9.4 v0.10.0\n\nInstead of using `rm` we can simply use `-`:\n\n    $ n - 0.9.4\n\n### Binary Usage\n\nWhen running multiple versions of node, we can target\nthem directly by asking `n` for the binary path:\n\n    $ n bin 0.9.4\n    /usr/local/n/versions/0.9.4/bin/node\n\nOr by using a specific version through `n`\'s `use` sub-command:\n\n    $ n use 0.9.4 some.js\n\nwith flags:\n\n    $ n as 0.9.4 --debug some.js\n\n## Usage\n\n Output from `n --help`:\n\n    Usage: n [options/env] [COMMAND] [args]\n\n    Environments:\n     n [COMMAND] [args]            Uses default env (node)\n     n io [COMMAND]                Sets env as io\n\n    Commands:\n\n      n                              Output versions installed\n      n latest                       Install or activate the latest node release\n      n -a x86 latest                As above but force 32 bit architecture\n      n stable                       Install or activate the latest stable node release\n      n lts                          Install or activate the latest LTS node release\n      n <version>                    Install node <version>\n      n use <version> [args ...]     Execute node <version> with [args ...]\n      n bin <version>                Output bin path for <version>\n      n rm <version ...>             Remove the given version(s)\n      n --latest                     Output the latest node version available\n      n --stable                     Output the latest stable node version available\n      n --lts                        Output the latest LTS node version available\n      n ls                           Output the versions of node available\n\n    (iojs):\n\n      n io latest                    Install or activate the latest iojs release\n      n io -a x86 latest             As above but force 32 bit architecture\n      n io <version>                 Install iojs <version>\n      n io use <version> [args ...]  Execute iojs <version> with [args ...]\n      n io bin <version>             Output bin path for <version>\n      n io rm <version ...>          Remove the given version(s)\n      n io --latest                  Output the latest iojs version available\n      n io ls                        Output the versions of iojs available\n\n    Options:\n\n      -V, --version   Output current version of n\n      -h, --help      Display help information\n      -q, --quiet     Disable curl output (if available)\n      -d, --download  Download only\n      -a, --arch      Override system architecture\n\n    Aliases:\n\n      which   bin\n      use     as\n      list    ls\n      -       rm\n\n## Custom source\n\nIf you would like to use a project other than the official Node.js or io.js projects, you can use the special `n project [command]` which allows you to control the behavior of `n` using environment variables.\n\nExample:\n\nTo grab the latest io.js version but name it "foo" instead,\n\n      PROJECT_NAME="foo" PROJECT_URL="https://iojs.org/dist/" n project latest\n\nRequired Variables:\n\n* `PROJECT_NAME`: The name the project will be stored under\n* `PROJECT_URL`: The location to download the project from. Note, this must follow the same format as the io.js/Node.js repos\n\nOptional Variables:\n\n* `HTTP_USER`: The username if the `PROJECT_URL` is protected by basic authentication\n* `HTTP_PASSWORD`: The password if the `PROJECT_URL` is protected by basic authentication\n* `PROJECT_VERSION_CHECK`: Many custom projects keep the same version number as the Node.js release they are based on, and maintain their own separate version in process. This allows you to define a JavaScript variable that will be used to check for the version of the process, for example: `process.versions.node`\n\n## Custom architecture\n\nBy default `n` picks the binaries matching your system architecture, e.g. `n` will download 64 bit binaries for a 64 bit system. You can override this by using the `-a` or `--arch` option.\n\nDownload and use latest 32 bit version of node:\n\n    $ n --arch x86 latest\n\nDownload and use latest 32 bit version of iojs:\n\n    $ n io --arch x86 latest\n\n\n## Details\n\n `n` by default installs node to _/usr/local/n/versions_, from\n which it can see what you have currently installed, and activate previously installed versions of node when `n <version>` is invoked again.\n\n Activated nodes are then installed to the prefix _/usr/local_, which of course may be altered via the __N_PREFIX__ environment variable.\n\n To alter where `n` operates simply export __N_PREFIX__ to whatever you prefer.\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+92 silly resolved     readmeFilename: 'README.md',
+92 silly resolved     _id: 'n@2.1.0',
+92 silly resolved     dist: { shasum: '9762086bc5aad210bed5a7eaab04e42fb4ef0d85' },
+92 silly resolved     _from: 'n@',
+92 silly resolved     _resolved: 'https://registry.npmjs.org/n/-/n-2.1.0.tgz' } ]
+93 info install n@2.1.0 into C:\Users\jminer\AppData\Roaming\npm
+94 info installOne n@2.1.0
+95 error notsup Unsupported
+95 error notsup Not compatible with your operating system or architecture: n@2.1.0
+95 error notsup Valid OS:    !win32
+95 error notsup Valid Arch:  any
+95 error notsup Actual OS:   win32
+95 error notsup Actual Arch: x64
+96 error System Windows_NT 6.1.7601
+97 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "n"
+98 error cwd C:\Users\jminer\Documents\GitHub\james-miner\app
+99 error node -v v0.10.17
+100 error npm -v 1.3.8
+101 error code EBADPLATFORM
+102 verbose exit [ 1, true ]
