@@ -2,11 +2,45 @@
 	<head>
 		<title>Welcome to James Miner's portfolio!</title>
 		<extl:scriptpack>
-			<script type="application/javascript" src="js/extltest.js"></script>
+			<script type="application/javascript" src="js/loadfunctions.js"></script>
+			<script type="application/javascript" src="js/pagelinks.js"></script>
 		</extl:scriptpack>
+		<extl:stylepack>
+			<link rel="stylesheet" type="text/css" href="css/main.css" />
+			<link rel="stylesheet" type="text/css" href="css/canvas-burn.css" />
+		</extl:stylepack>
+		
+		<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+		<script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	</head>
 	
 	<body>
-		<h1>Portfolio</h1>
+		<section id="content">
+			<section id="header">
+				<p class="letterhead"><span>James Miner<span></p>
+			</section>
+			<section id="landing">
+				<p class="tag">Designer &bull; Developer &bull; Engineer</p>
+			</section>
+			<section id="links" class="sm-hidden md-shown container-fluid">
+				<div class="col-md-3">
+					<a href="javascript:void(0);" link-for="projects">Projects</a>
+				</div>
+				<div class="col-md-3">
+					<a href="javascript:void(0);" link-for="resume">Resume</a>
+				</div>
+				<div class="col-md-3">
+					<a href="javascript:void(0);" link-for="about">About</a>
+				</div>
+				<div class="col-md-3">
+					<a href="javascript:void(0);" link-for="contact">Contact</a>
+				</div>
+			</section>
+			<section id="projects" class="hide">
+				Hello, World!
+			</section>
+		</section>
 	</body>
 </html>

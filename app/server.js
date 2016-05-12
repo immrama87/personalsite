@@ -8,7 +8,6 @@ var appServer = app.listen(3000, function(){
 	console.log("Started application server on port 3000");
 });
 
-web.use("/*.*", express.static(__dirname + "../web"));
 web.use("/*", require("extl")(__dirname + "../web"));
 
 var webServer = web.listen(80, function(){

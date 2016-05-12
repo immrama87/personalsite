@@ -1,1 +1,2 @@
-window.onload=function(){alert("Hello, World!")};
+window.onload=function(){(new PageLinks).scan()};var PageLinks=function(){function e(c){$(c).on("click touch touchstart",function(b){b=$("#"+$(c).attr("link-for"));if(d){var a=$("#landing");a.animate({opacity:0,height:0},500,"easeInCubic",function(){a.remove()});f.animate({height:"1em","font-size":"3em","margin-top":"0.5em"},500,"easeInCubic");b.css("opacity","0").removeClass("hide").addClass("show").animate({opacity:"1"},500,"easeInCubic");d=!1}else $("section.show").animate({opacity:0},500,"easeInCubic"),b.animate({opacity:1},500,"easeInCubic")})}
+var a={},f=$("#header"),d=!0;a.scan=function(){$(document).find("a[link-for]").each(function(a,b){e(b)})};return a};
