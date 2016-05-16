@@ -1,0 +1,17 @@
+body,html{
+	margin:0;
+	width:100%;
+	height:100%;
+}
+
+section.header{
+	height:2em;
+	text-align:center;
+}
+
+table#projects{
+	width:80%;
+	margin:0 auto;
+	table-layout:fixed;
+	text-align:left;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{include:head}}
+		<script type="application/javascript" src="js/projects.js"></script>
+	</head>
+	<body>
+		<section class="header">
+			<h1>Projects Administration</h1>
+		</section>
+		<table id="projects">
+			<thead>
+				<tr>
+					<th>Project Name</th>
+					<th>Created At</th>
+					<th>Last Commit</th>
+					<th>Tracked as Project?</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{foreach:projects}}
+					<tr id="{{id}}">
+						<td>{{name}}</td>
+						<td>{{date:created}}</td>
+						<td>{{date:modified}}</td>
+						<td><input type="checkbox" /></td>
+					</tr>
+				{{/foreach}}
+			</tbody>
+		</table>
+	</body>
+</html>
