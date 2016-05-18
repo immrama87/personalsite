@@ -1,4 +1,5 @@
 var GitHubApi = require("github");
+var config = require("./config");
 var github = new GitHubApi({
 	version:	'3.0.0',
 	debug:		false,
@@ -12,7 +13,7 @@ var github = new GitHubApi({
 
 github.authenticate({
 	type:		'token',
-	token:		'41d8aaf1426e9e6e487d001dc88e5a77128dbe4f'
+	token:		config.github.oauth
 });
 
 var curly = require("curly-form")(__dirname + "\\html\\");
