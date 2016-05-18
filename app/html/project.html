@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{include:head}}
+		<script type="application/javascript" src="/js/project.js"></script>
+	</head>
+	<body>
+		<section class="header">
+			<h1><a href="/admin/projects">Projects Administration</a> - {{project_id}}</h1>
+		</section>
+		<section class="container">
+			<p>Status: {{status}}</p>
+			<p>Created: {{date:CreateDate}}</p>
+			<p>Last Modified: {{date:ModifiedDate}}</p>
+			<p><a id='update-commit' href="javascript:void(0);">Change to previous commit</a></p>
+		</section>
+		<section class="file-tree">
+			{{filetree:project_tree}}
+		</section>
+		<section class="tags">
+		</section>
+	</body>
+</html>

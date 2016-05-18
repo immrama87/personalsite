@@ -2,7 +2,7 @@
 <html>
 	<head>
 		{{include:head}}
-		<script type="application/javascript" src="js/projects.js"></script>
+		<script type="application/javascript" src="/js/projects.js"></script>
 	</head>
 	<body>
 		<section class="header">
@@ -23,7 +23,7 @@
 						<td>{{name}}</td>
 						<td>{{date:created}}</td>
 						<td>{{date:modified}}</td>
-						<td><input type="checkbox" /></td>
+						<td><input type="checkbox" {{istracked}}/></td>
 					</tr>
 				{{/foreach}}
 			</tbody>
