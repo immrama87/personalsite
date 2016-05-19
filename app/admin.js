@@ -199,43 +199,42 @@ module.exports = (function(app){
 			for(var i=0;i<intree.tree.length;i++){
 				if(intree.tree[i].type.toLowerCase() == "blob"){
 					var blobpath = path + intree.tree[i].path;
-					running++;
-					github.repos.getContent({
-						user: 	'immrama87',
-						repo:	project_id,
-						path:	blobpath
-					}, function(err, content){
-						if(err && sendError)
-							sendError(err);
-					
-						response[content.name] = {
-							size: content.size,
-							content: content.content,
-							dl:	content.download_url
-						};
-						
-						completeRequest();
-					});
+					response[intree.tree[i].path] = {
+						size:	intree.tree[i].size,
+						sha:	intree.tree[i].sha
+					};
 				}
 				else if(intree.tree[i].type.toLowerCase() == "tree"){
-					running++;
 					var dirpath = intree.tree[i].path + "/";
-					var treename = path + dirpath;
-					github.gitdata.getTree({
-						user:	'immrama87',
-						repo:	project_id,
-						sha:	intree.tree[i].sha
-					}, function(err, nexttree){
+					buildSubTree(dirpath, path, intree.tree[i].sha, function(err, data){
 						if(err && sendError)
 							sendError(err);
 						
-						response[dirpath] = parseTree(nexttree, treename);
-						completeRequest();
+						response[data.dirpath] = parseTree(data.tree, data.treename);
 					});
 				}
 			}
 			
 			return response;
+		}
+		
+		function buildSubTree(dirpath, path, sha, callback){
+			running++;
+			
+			var treename = path + dirpath;
+			github.gitdata.getTree({
+				user:	'immrama87',
+				repo:	project_id,
+				sha:	sha
+			}, function(err, nexttree){
+				var response = {
+					tree:		nexttree,
+					dirpath:	dirpath,
+					treename:	treename
+				};
+				callback(err, response);
+				completeRequest();
+			});
 		}
 		
 		function completeRequest(){
@@ -265,24 +264,34 @@ module.exports = (function(app){
 			buildPath(__dirname + "\\projects\\" + project_id, diff);
 		}
 		
-		function buildPath(path, tr){
+		function buildPath(path, tr, prefix){
+			console.log("Path: " + path + "\nTree: " + tr + "\nPrefix: " + prefix);
+			prefix = prefix || "";
+			
 			if(!fs.existsSync(path)){
 				fs.mkdirSync(path);
 			}
 			
 			for(var p in tr){
-				if(tr[p].dl){
-					writeFile(path, p, tr[p].dl);
+				if(tr[p].size){
+					if(tr[p].dl){
+						writeFile(path, p, prefix, tr[p].dl);
+					}
+					else {
+						writeFile(path, p, prefix);
+					}
 				}
 				else {
-					buildPath(path + "\\" + p, tr[p]);
+					buildPath(path + "\\" + p, tr[p], prefix + p);
 				}
 			}
 		}
 		
-		function writeFile(dir, filename, dl){
+		function writeFile(dir, filename, prefix, dl){
 			running++;
 			var requester = http;
+			dl = dl || "https://raw.githubusercontent.com/immrama87/" + project_id + "/master/" + prefix + filename;
+			console.log(dl);
 			if(dl.indexOf("https://") == 0){
 				requester = https;
 			}
@@ -365,7 +374,20 @@ module.exports = (function(app){
 		}
 		
 		pt.scan = function(){
-			db.get({
+			console.log(tree_obj);
+			db.update({
+				coll:	'projects',
+				query:	{
+					project_id:	project_id
+				},
+				data:	{
+					project_tree:	tree_obj
+				},
+				callback:	function(response){
+				
+				}
+			});
+			/*db.get({
 				coll:	'projects',
 				query:	{
 					project_id:	project_id
@@ -381,7 +403,7 @@ module.exports = (function(app){
 						buildProjectDirectory();
 					}
 				}
-			});
+			});*/
 		}
 		
 		return pt;
