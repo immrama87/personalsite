@@ -261,42 +261,51 @@ module.exports = (function(app){
 		
 		function startBuild(){
 			running = 0;
-			buildPath(__dirname + "\\projects\\" + project_id, diff);
+			buildPath(__dirname + "\\projects\\" + project_id + "/", diff);
 		}
 		
-		function buildPath(path, tr, prefix){
-			console.log("Path: " + path + "\nTree: " + tr + "\nPrefix: " + prefix);
-			prefix = prefix || "";
-			
-			if(!fs.existsSync(path)){
-				fs.mkdirSync(path);
+		function buildPath(path, tr){
+			console.log(path);
+			try{
+				var stat = fs.lstatSync(path);
+				if(!stat.isDirectory()){
+					if(sendError){
+						sendError("Could not create directory " + path);
+					}
+					throw "Could not create directory " + path;
+				}
 			}
-			
-			for(var p in tr){
-				if(tr[p].size){
-					if(tr[p].dl){
-						writeFile(path, p, prefix, tr[p].dl);
-					}
-					else {
-						writeFile(path, p, prefix);
-					}
+			catch(err){
+				if(err.code == "ENOENT"){
+					fs.mkdirSync(path);
 				}
 				else {
-					buildPath(path + "\\" + p, tr[p], prefix + p);
+					if(sendError){
+						sendError(err);
+					}
+					throw err;
+				}
+			}
+			
+			for(var file in tr){
+				if(tr[file].hasOwnProperty("sha")){
+					writeFile(path+file);
+				}
+				else {
+					buildPath(path+file, tr[file]);
 				}
 			}
 		}
 		
-		function writeFile(dir, filename, prefix, dl){
+		function writeFile(filename){
 			running++;
-			var requester = http;
-			dl = dl || "https://raw.githubusercontent.com/immrama87/" + project_id + "/master/" + prefix + filename;
-			console.log(dl);
-			if(dl.indexOf("https://") == 0){
-				requester = https;
-			}
+			var dlpath = filename.substring(filename.indexOf(project_id + "/") + (project_id + "/").length);
 			
-			var file = fs.createWriteStream(dir + "\\" + filename);
+			var requester = https;
+			dl = "https://raw.githubusercontent.com/immrama87/" + project_id + "/master/" + dlpath;
+			console.log(dl);
+			
+			var file = fs.createWriteStream(filename);
 			var request = requester.get(dl, function(response){
 				response.pipe(file);
 				file.on("finish", function(){
@@ -374,27 +383,14 @@ module.exports = (function(app){
 		}
 		
 		pt.scan = function(){
-			console.log(tree_obj);
-			db.update({
-				coll:	'projects',
-				query:	{
-					project_id:	project_id
-				},
-				data:	{
-					project_tree:	tree_obj
-				},
-				callback:	function(response){
-				
-				}
-			});
-			/*db.get({
+			db.get({
 				coll:	'projects',
 				query:	{
 					project_id:	project_id
 				},
 				fields:	['project_tree'],
 				callback:	function(response){
-					if(response.records[0].project_tree){
+					if(response.records[0].hasOproject_tree){
 						project_tree = JSON.parse(response.records[0].project_tree);
 						compareTrees();
 					}
@@ -403,7 +399,7 @@ module.exports = (function(app){
 						buildProjectDirectory();
 					}
 				}
-			});*/
+			});
 		}
 		
 		return pt;
